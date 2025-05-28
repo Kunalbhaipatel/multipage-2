@@ -8,7 +8,7 @@ st.set_page_config(page_title="Multi-Well/Rig Comparison", layout="wide")
 st.title("📊 Multi-Well & Rig Comparison")
 
 df = load_well_data()
-filter_controls(df['Well_Name'].unique(), df['Rig'].unique())
+filter_controls(df["well_name"].unique(), df["rig"].unique())
 
 # Multi-select filters
 selected_wells = st.multiselect("Compare Wells", df['Well_Name'].unique(), default=df['Well_Name'].unique()[:3])
