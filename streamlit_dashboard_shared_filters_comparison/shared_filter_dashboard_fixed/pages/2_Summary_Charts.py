@@ -6,7 +6,7 @@ import plotly.express as px
 
 st.title("📈 Summary Charts")
 df = load_well_data()
-filter_controls(df['Well_Name'].unique(), df['Rig'].unique())
+filter_controls(df["well_name"].unique(), df["rig"].unique())
 
 selected_well = st.session_state.get("selected_well")
 if selected_well:
