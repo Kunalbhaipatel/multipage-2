@@ -21,7 +21,7 @@ st.image("https://img.icons8.com/color/96/000000/oil-industry.png", width=60)
 st.title("🛢️ Drilling Performance Dashboard")
 
 df = load_well_data()
-filter_controls(df['Well_Name'].unique(), df['Rig'].unique())
+filter_controls(df["well_name"].unique(), df["rig"].unique())
 
 if st.session_state.get("selected_well"):
     st.success(f"Selected Well: {st.session_state.selected_well}")
